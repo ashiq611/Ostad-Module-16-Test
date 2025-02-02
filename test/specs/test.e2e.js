@@ -6,10 +6,10 @@ describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open()
 
-        await LoginPage.login('standard_user', 'secret_sauce')
-        await expect(SecurePage.flashAlert).toBeExisting()
-        await expect(SecurePage.flashAlert).toHaveText(
-            expect.stringContaining('You logged into a secure area!'))
+        await LoginPage.login('locked_out_user', 'secret_sauce')
+        await expect(SecurePage.verifyError).toBeExisting()
+        await expect(SecurePage.verifyError).toHaveText(
+            expect.stringContaining('Epic sadface: Sorry, this user has been locked out.'))
     })
 })
 

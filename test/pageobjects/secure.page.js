@@ -4,13 +4,13 @@ const Page = require('./page');
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class SecurePage extends Page {
+class Error extends Page {
     /**
      * define selectors using getter methods
      */
-    get flashAlert () {
-        return $('#flash');
+    get verifyError () {
+        return $("//h3[contains(text(), 'Epic sadface: Sorry, this user has been locked out.')]");
     }
 }
 
-module.exports = new SecurePage();
+module.exports = new Error();
