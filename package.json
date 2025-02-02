@@ -1,0 +1,31 @@
+{
+  "name": "automation_by_webdriverio_framework",
+  "version": "1.0.0",
+  "description": "webdriverio pom framework",
+  "keywords": [
+    "webdriverio",
+    "pom"
+  ],
+  "homepage": "https://github.com/ashiq611/Ostad-Module-16-Test#readme",
+  "bugs": {
+    "url": "https://github.com/ashiq611/Ostad-Module-16-Test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashiq611/Ostad-Module-16-Test.git"
+  },
+  "license": "ISC",
+  "author": "Md. Ashiqur Rahman",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.7.2",
+    "@wdio/local-runner": "^9.7.2",
+    "@wdio/mocha-framework": "^9.7.2",
+    "@wdio/spec-reporter": "^9.6.3"
+  }
+}
