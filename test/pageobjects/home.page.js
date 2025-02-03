@@ -8,12 +8,25 @@ class HomePage extends Page{
     get hamburgerMenuClose() { return $("//button[@id='react-burger-cross-btn']"); }
     get addToCartButtons() { return $$("//button[@id='add-to-cart-sauce-labs-backpack']"); }
     get cartIcon() { return $('.shopping_cart_link'); }
+    get filterButton() { return $("//select[@class='product_sort_container']"); }
+    get filterOptions() { return $$("//select[@class='product_sort_container']/option"); }
 
     async resetApp(){
         await this.hamburgerMenu.click();
         await this.resetAppState.click();
         await this.hamburgerMenuClose.click();
     }
+
+    async filter() {
+        await this.filterButton.click();
+        await this.filterOptions[1].click();
+    }
+
+    async firstProductAddToCart() {
+        await this.addToCartButtons[0].click();
+    }
+
+    
 
     async addProductsToCart(count = 3) {
         
