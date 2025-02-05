@@ -19,7 +19,7 @@ git clone <repository-url>
 cd <project-directory>
 npm install
 ```
-##now run
+## now run
 
 ```sh
 npx wdio wdio.conf.js
